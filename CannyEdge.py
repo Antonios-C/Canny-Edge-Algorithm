@@ -1,14 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct  6 10:40:53 2020
-
-@author: Micah
-
-"""
-#changelog- 10/13- replacing code with better code.
-
-
-
 import matplotlib as mp #used at end for displaying image
 from warnings import simplefilter as sf #Used to ignore FutureWarning from try except structure in imagefile() 
 import numpy as np
