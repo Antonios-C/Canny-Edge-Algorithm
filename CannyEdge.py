@@ -196,6 +196,7 @@ def edges(image):
 
 #executions
 image = getname()
+image = "\Users\chris\Pictures\Saved Pictures\python project\CannyEdge\CampusTest.CampusTest.png"
 if image == 'ERROR: Input file is not .png': #error handling 1- checks for error in getname()
     print(image) #prints normally if it isnt
 else: #this structure of if else makes there not be errors for any type of input
@@ -204,9 +205,9 @@ else: #this structure of if else makes there not be errors for any type of input
         print(image) #prints normally if module is not installed
     else: #If the above functions produce an image, all following functions work on the image. No errors should exist after this point
         image = grey(image) 
-        save(image,'temp.png')
-        smooth('temp.png') #this function uses a file, not an array so we use temp saved above
-        image = imagefile('testimage-processed.png') #smooth outputs a file, not an array so we reopen the image temp for array numpy
+        save(image,'greyscale.png')
+        smooth('greyscale.png') #this function uses a file, not an array so we use temp saved above
+        image = imagefile('smoothedImage.png') #smooth outputs a file, not an array so we reopen the image temp for array numpy
         image = edges(image)
         image = img_th(image)
         mp.pyplot.imshow(image) #final image is printed to console
